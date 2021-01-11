@@ -7,8 +7,9 @@ const useStyles = makeStyles({
     countWrap:{
         backgroundColor: 'rgba(0,0,0,0.1)',
         borderRadius: '10px',
-        height: '22vh',
         display: 'flex',
+        flexWrap:'wrap',
+        justifyContent:'center',
         flexDirection: 'row',
         padding: '3vh',
         margin: '10px 0',
@@ -19,7 +20,8 @@ const useStyles = makeStyles({
         height: '50vh',
         display: 'flex',
         flexDirection: 'row',
-        width: '100%'
+        width: '100%',
+        margin: '15px 0'
     },
     sideWrap:{
         backgroundColor: 'rgba(0,0,0,0.1)',
@@ -28,7 +30,8 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'row',
         width: '100%',
-        padding: '3vh'
+        padding: '3vh',
+        margin: '15px 0'
     }
 })
 

@@ -7,7 +7,7 @@ const useStyles = makeStyles({
         height: '15vh',
         border: '1px solid white',
         borderRadius: '15px',
-        margin:'0 25px',
+        margin:'15px 25px',
         borderTopWidth: '10px',
         
         '& div':{

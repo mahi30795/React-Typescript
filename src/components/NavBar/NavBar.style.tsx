@@ -4,6 +4,7 @@ const useStyles = makeStyles({
     header:{
         padding:'10px 10px',
         display: 'flex',
+        flexWrap:'wrap',
         justifyContent: 'space-between',
         margin:'0px 30px',
         width: '100%'
