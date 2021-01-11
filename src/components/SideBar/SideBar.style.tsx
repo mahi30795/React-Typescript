@@ -12,6 +12,8 @@ const useStyles = makeStyles({
         padding: '20px',
         display: 'flex',
         flexDirection: 'column',
+        boxSizing: 'border-box',
+        transition: 'transform 0.3s ease-out', 
         ['@media (min-width:780px)']: { // eslint-disable-line no-useless-computed-key
             display: 'none'
         }
@@ -25,6 +27,12 @@ const useStyles = makeStyles({
             flexDirection: 'column',
             justifyContent: 'center'
         }
+    },
+    open:{
+        transform: 'translateX(0)'
+    },
+    close:{
+        transform: 'translateX(-100%)'
     }
     
 });

@@ -11,7 +11,7 @@ const useStyles = makeStyles({
                 padding:'25px 10px',
                 color: 'grey',
                 ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
-                    display: 'none'
+                    float: 'none'
                 }
             }
         }

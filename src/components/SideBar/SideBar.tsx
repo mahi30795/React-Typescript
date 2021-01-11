@@ -1,20 +1,25 @@
 import Logo from '@components/Logo/Logo';
-import NavIcons from '@components/NavBar/NavIcons/NavIcons';
-import NavItems from '@components/NavBar/NavItems/NavItems';
+import NavIcons from './NavIcons/NavIcons';
+import NavItems from './NavItems/NavItems';
 import * as React from 'react';
 import useStyles from './SideBar.style';
 
 export interface SideBarProps {
-    
+    open: boolean,
+    clicked: () => void
 }
  
-const SideBar: React.FC<SideBarProps> = () => {
+const SideBar: React.FC<SideBarProps> = ({open, clicked}: SideBarProps) => {
     const classes = useStyles();
+    let attachedClasses = [classes.sidebar, classes.close];
+    if(open){
+        attachedClasses = [classes.sidebar, classes.open];
+    }
     return ( 
-        <div className={classes.sidebar}>
+        <div className={attachedClasses.join(' ')}>
             <div className={classes.logoandclose}>
                 <Logo/>
-                <div>X</div>
+                <div onClick={clicked}>X</div>
             </div>
             <NavItems/>
             <NavIcons/>

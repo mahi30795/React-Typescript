@@ -2,7 +2,10 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     wrap:{
-        margin:'5vh 5vh'
+        margin:'5vh 5vh',
+        ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
+            margin: '0'
+        }
     },
     countWrap:{
         backgroundColor: 'rgba(0,0,0,0.1)',
