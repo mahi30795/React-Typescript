@@ -11,7 +11,7 @@ const useStyles = makeStyles({
         flexWrap:'wrap',
         justifyContent:'center',
         flexDirection: 'row',
-        padding: '3vh',
+        padding: '2vh',
         margin: '10px 0',
     },
     dataWrap:{
