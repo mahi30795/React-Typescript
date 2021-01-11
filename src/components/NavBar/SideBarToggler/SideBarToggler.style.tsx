@@ -11,7 +11,10 @@ const useStyles = makeStyles({
             height: '5px',
             backgroundColor: 'grey',
             margin: '4px 0',
-          }
+        },
+        ['@media (min-width:780px)']: { // eslint-disable-line no-useless-computed-key
+            display: 'none'
+        }
     }
 });
 
