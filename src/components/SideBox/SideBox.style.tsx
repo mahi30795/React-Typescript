@@ -13,10 +13,10 @@ const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
     },
-    count:{
-        fontSize: '2rem'
-    },
     title:{
+        fontSize: '1rem'
+    },
+    count:{
         fontSize:'0.9rem'
     },
     iconBox:{

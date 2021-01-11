@@ -11,8 +11,8 @@ const SideBox: React.FC<SideBoxProps> = ({ title, count }: SideBoxProps) => {
     return (
         <div className={classes.box}>
             <div className={classes.innerBox}>
-                <p className={classes.count}><strong>{title}</strong></p>
-                <p className={classes.title}>{count}</p>
+                <p className={classes.title}><strong>{title}</strong></p>
+                <p className={classes.count}>{count}</p>
             </div>
         </div>
 
