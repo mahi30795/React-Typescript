@@ -63,10 +63,10 @@ const Dashboard: React.FC<DashboardProps> = () => {
 
     return (
         <Aux>
-
+            
             <Container fluid>
                 <Row>
-                    <NavBar />
+                    <NavBar /> 
                 </Row>
 
                 <div className={classes.wrap}>

@@ -15,20 +15,18 @@ const SmallBox: React.FC<SmallBoxProps> = ({ title, count, color, icon }: SmallB
     }
     return (
         <div className={classes.box} style={styleTop}>
-            <div>
-                <div className={classes.innerBox}>
-                    <ul>
-                        <li className={classes.count}>
-                            <strong>{count}</strong>
-                        </li>
-                        <li className={classes.title}>
-                            {title}
-                        </li>
-                    </ul>
-                </div>
-                <div className={classes.iconBox}>
-                    {icon !== '' ? <img src={icon} alt="icon" /> : ''}
-                </div>
+            <div className={classes.innerBox}>
+                <ul>
+                    <li className={classes.count}>
+                        <strong>{count}</strong>
+                    </li>
+                    <li className={classes.title}>
+                        {title}
+                    </li>
+                </ul>
+            </div>
+            <div className={classes.iconBox}>
+                {icon !== '' ? <img src={icon} alt="icon" /> : ''}
             </div>
         </div>
 

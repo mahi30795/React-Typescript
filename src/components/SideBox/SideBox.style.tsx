@@ -7,16 +7,16 @@ const useStyles = makeStyles({
         height: '15vh',
         border: '1px solid white',
         borderRadius: '15px',
-        padding: '2vh'
+        padding: '3vh'
     },
     innerBox:{
         display: 'flex',
         flexDirection: 'column',
     },
-    count:{
-        fontSize: '2rem'
-    },
     title:{
+        fontSize: '1rem'
+    },
+    count:{
         fontSize:'0.9rem'
     },
     iconBox:{
