@@ -5,7 +5,6 @@ import NavItems from './NavItems/NavItems';
 import NavIcons from './NavIcons/NavIcons';
 import SideBar from '@components/SideBar/SideBar';
 import SideBarToggler from '@components/NavBar/SideBarToggler/SideBarToggler';
-import { Backdrop } from '@material-ui/core';
 import BackDrop from '@components/BackDrop/BackDrop';
 export interface NavBarProps {
     
