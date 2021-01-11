@@ -5,10 +5,10 @@ import user from '@assets/images/user.png';
 import phonebook from '@assets/images/phone-book.png';
 
 export interface NavIconsProps {
-
+    
 }
 
-const NavIcons: React.FC<NavIconsProps> = () => {
+const NavIcons: React.FC<NavIconsProps> = ()=> {
     const icons = [
         {
             id:1,
@@ -34,7 +34,7 @@ const NavIcons: React.FC<NavIconsProps> = () => {
     const iconItems = icons.map(itm => <li key={itm.id} className={classes.icon}><img src={itm.icon} alt={itm.alt} /></li>);
     
     return (
-        <nav className={classes.iconNav}>
+        <nav className={classes.iconNav} >
             <ul>
                 {iconItems}
             </ul>

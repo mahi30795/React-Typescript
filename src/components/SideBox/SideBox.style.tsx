@@ -7,7 +7,7 @@ const useStyles = makeStyles({
         height: '15vh',
         border: '1px solid white',
         borderRadius: '15px',
-        padding: '2vh'
+        padding: '3vh'
     },
     innerBox:{
         display: 'flex',

@@ -3,6 +3,7 @@ import Logo from '@components/Logo/Logo';
 import useStyles from './NavBar.style';
 import NavItems from './NavItems/NavItems';
 import NavIcons from './NavIcons/NavIcons';
+import SideBar from '@components/SideBar/SideBar';
 export interface NavBarProps {
     
 }
@@ -14,6 +15,7 @@ const NavBar: React.FC<NavBarProps> = () => {
         <Logo/>
         <NavItems/>
         <NavIcons/>
+        <SideBar />
     </header> 
     );
 }
