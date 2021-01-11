@@ -4,20 +4,21 @@ import NavBar from '@components/NavBar/NavBar';
 import { Col, Container, Row } from 'react-bootstrap';
 import useStyles from './Dashboard.style';
 import SmallBox from '@components/SmallBox/SmallBox';
-import user from '@assets/images/user.png'
+import cellphone from '@assets/images/cell-phone.png'
+import SideBox from '@components/SideBox/SideBox';
 export interface DashboardProps {
 
 }
 
 const Dashboard: React.FC<DashboardProps> = () => {
     const classes = useStyles();
-    const boxfill = [
+    const countfill = [
         {
             id: 1,
             color: 'purple',
             count: '100',
             title: 'Devices',
-            icon: user
+            icon: cellphone
         },
         {
             id: 2,
@@ -48,7 +49,18 @@ const Dashboard: React.FC<DashboardProps> = () => {
             icon: ''
         }
     ]
-    const boxes = boxfill.map(itm => <SmallBox key={itm.id} title={itm.title} count={itm.count} color={itm.color} icon={itm.icon} />)
+    const counts = countfill.map(itm => <SmallBox key={itm.id} title={itm.title} count={itm.count} color={itm.color} icon={itm.icon} />)
+
+    const sidefill = [
+        {
+            id:1,
+            title: 'Users',
+            count: '100'
+        }
+    ]
+
+    const sideboxes = sidefill.map(itm=> <Row key={itm.id}><SideBox title={itm.title} count={itm.count} /></Row>)
+
     return (
         <Aux>
 
@@ -66,19 +78,25 @@ const Dashboard: React.FC<DashboardProps> = () => {
                     <Row>
                         <Col lg={12}>
                             <div className={classes.countWrap}>
-                                {boxes}
+                                {counts}
                             </div>
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={8}>
+                        <Col lg={9}>
                             <div className={classes.dataWrap}>
 
                             </div>
                         </Col>
-                        <Col lg={4}>
+                        <Col lg={3}>
                             <div className={classes.sideWrap}>
-
+                                <Container>
+                                    <Row>
+                                        <strong>Battery Status</strong>
+                                    </Row>
+                                    <br/>
+                                   {sideboxes}
+                                </Container>
                             </div>
                         </Col>
                     </Row>

@@ -3,32 +3,15 @@ import {makeStyles} from '@material-ui/core/styles'
 const useStyles = makeStyles({
     box:{
         backgroundColor: 'white',
-        width: '30vh',
+        width: '100%',
         height: '15vh',
         border: '1px solid white',
         borderRadius: '15px',
-        margin:'0 25px',
-        borderTopWidth: '10px',
-        
-        '& div':{
-            margin: '0 10px',
-            display: 'flex',
-            flexDirection: 'row',
-            padding: '7px'
-        }
+        padding: '2vh'
     },
     innerBox:{
         display: 'flex',
-        alignItems: 'center',
-        width: '100%',
-        justifyContent: 'center',
-        '& ul':{
-            '& li':{
-                listStyleType: 'none',
-                justifyContent: 'center',
-                textAlign: 'center'
-            }
-        }
+        flexDirection: 'column',
     },
     count:{
         fontSize: '2rem'

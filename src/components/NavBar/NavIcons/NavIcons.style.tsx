@@ -2,17 +2,16 @@ import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
     iconNav:{
-        '& ul':{
-            '& li':{
-                float: 'left',
-                listStyleType:'none'
-            }
-        }
+        padding: '16px',
     },
     icon:{
-        width: '30px',
-        height: '30px',
-        padding: '16px 10px'
+        float: 'left',
+        listStyleType:'none',
+        margin:'0 10px',
+        '& img':{
+            width: '35px',
+            height: '35px',
+        }
     }
 });
 

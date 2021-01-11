@@ -27,7 +27,8 @@ const useStyles = makeStyles({
         height: '50vh',
         display: 'flex',
         flexDirection: 'row',
-        width: '100%'
+        width: '100%',
+        padding: '3vh'
     }
 })
 
