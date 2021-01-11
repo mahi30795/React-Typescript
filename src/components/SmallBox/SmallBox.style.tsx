@@ -7,20 +7,17 @@ const useStyles = makeStyles({
         height: '15vh',
         border: '1px solid white',
         borderRadius: '15px',
-        margin:'15px 25px',
+        margin:'15px 15px',
         borderTopWidth: '10px',
-        
-        '& div':{
-            margin: '0 10px',
-            display: 'flex',
-            flexDirection: 'row',
-            padding: '7px'
-        }
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        flexDirection: 'row',
     },
     innerBox:{
         display: 'flex',
         alignItems: 'center',
-        width: '100%',
+        width: '50%',
         justifyContent: 'center',
         '& ul':{
             '& li':{
@@ -40,7 +37,7 @@ const useStyles = makeStyles({
         display: 'flex',
         alignItems: 'center',
         padding: '0.5vh 1vh',
-        width: '100%',
+        width: '50%',
         justifyContent: 'center',
         '& img':{
             width: '30px',
