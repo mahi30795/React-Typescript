@@ -30,7 +30,6 @@ const NavIcons: React.FC<NavIconsProps> = ()=> {
         }
     ];
     const classes = useStyles();
-    console.log(icons);
     const iconItems = icons.map(itm => <li key={itm.id} className={classes.icon}><img src={itm.icon} alt={itm.alt} /></li>);
     
     return (
