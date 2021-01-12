@@ -7,7 +7,11 @@ const useStyles = makeStyles({
         flexWrap:'wrap',
         justifyContent: 'space-between',
         margin:'0px 30px',
-        width: '100%'
+        width: '100%',
+        ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
+            padding: '10px 0',
+            margin: '0 15px'
+        }
     }
 })
 
