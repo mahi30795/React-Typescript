@@ -7,7 +7,10 @@ const useStyles = makeStyles({
         height: '15vh',
         border: '1px solid white',
         borderRadius: '15px',
-        padding: '3vh'
+        padding: '3vh',
+        ['@media (max-width:1024px)']: { // eslint-disable-line no-useless-computed-key
+           height: '10vh'
+        }
     },
     innerBox:{
         display: 'flex',

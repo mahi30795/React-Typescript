@@ -16,6 +16,9 @@ const useStyles = makeStyles({
         flexDirection: 'row',
         padding: '2vh',
         margin: '10px 0',
+        ['@media (max-width:1024px)']: { // eslint-disable-line no-useless-computed-key
+            padding: '0'
+        }
     },
     dataWrap:{
         backgroundColor: 'rgba(0,0,0,0.1)',

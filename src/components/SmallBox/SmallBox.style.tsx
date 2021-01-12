@@ -13,6 +13,13 @@ const useStyles = makeStyles({
         flexWrap: 'wrap',
         justifyContent: 'center',
         flexDirection: 'row',
+        ['@media (max-width:768px)']: { // eslint-disable-line no-useless-computed-key
+            margin: '15px 5px',
+            width: '20vh'
+        },
+        ['@media (max-width:1024px)']: { // eslint-disable-line no-useless-computed-key
+            margin: '15px 8px'
+        }
     },
     innerBox:{
         display: 'flex',
