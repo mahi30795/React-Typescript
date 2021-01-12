@@ -4,14 +4,10 @@ const useStyles = makeStyles({
     iconNav:{
         padding: '16px',
         ['@media (max-width:780px)']: { // eslint-disable-line no-useless-computed-key
-            display: 'block',
             '& ul':{
                 padding: '0 !important'
             }
         },
-        ['@media (min-width:780px)']: { // eslint-disable-line no-useless-computed-key
-            display: 'none'
-          }
     },
     icon:{
         float: 'left',

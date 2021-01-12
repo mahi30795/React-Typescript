@@ -1,6 +1,6 @@
 import Logo from '@components/Logo/Logo';
-import NavIcons from './NavIcons/NavIcons';
-import NavItems from './NavItems/NavItems';
+import NavIcons from '@common/NavIcons/NavIcons';
+import NavItems from '@common/NavItems/NavItems';
 import * as React from 'react';
 import useStyles from './SideBar.style';
 
@@ -21,8 +21,8 @@ const SideBar: React.FC<SideBarProps> = ({open, clicked}: SideBarProps) => {
                 <Logo/>
                 <div onClick={clicked}>X</div>
             </div>
-            <NavItems/>
-            <NavIcons/>
+            <NavItems open={open}/>
+            <NavIcons open={open}/>
         </div>
      );
 }

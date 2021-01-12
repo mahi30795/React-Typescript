@@ -2,10 +2,10 @@ import * as React from 'react';
 import useStyles from './NavItems.style';
 
 export interface NavItemsProps {
-
+    open: boolean
 }
 
-const NavItems: React.FC<NavItemsProps> = () => {
+const NavItems: React.FC<NavItemsProps> = ({open}: NavItemsProps) => {
     const classes = useStyles()
     const navItems = [
         {
@@ -30,8 +30,11 @@ const NavItems: React.FC<NavItemsProps> = () => {
         }
     ];
     const nav = navItems.map(itm => <li key={itm.title}>{itm.title}</li>)
+    const display = {
+        display: open ? 'block' : 'none'
+    };
     return (
-        <nav className={classes.nav}>
+        <nav className={classes.nav} style={display}>
             <ul>
                 {nav}
             </ul>

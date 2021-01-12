@@ -1,11 +1,10 @@
 import * as React from 'react';
-import Aux from '@Aux';
-import NavBar from '@components/NavBar/NavBar';
 import { Col, Container, Row } from 'react-bootstrap';
 import useStyles from './Dashboard.style';
 import SmallBox from '@components/SmallBox/SmallBox';
 import cellphone from '@assets/images/cell-phone.png'
 import SideBox from '@components/SideBox/SideBox';
+import Layout from '@components/Layout/Layout';
 export interface DashboardProps {
 
 }
@@ -62,14 +61,8 @@ const Dashboard: React.FC<DashboardProps> = () => {
     const sideboxes = sidefill.map(itm=> <Row key={itm.id}><SideBox title={itm.title} count={itm.count} /></Row>)
 
     return (
-        <Aux>
-            
-            <Container fluid>
-                <Row>
-                    <NavBar /> 
-                </Row>
-
-                <div className={classes.wrap}>
+        <Layout>
+            <div className={classes.wrap}>
                     <Row>
                         <Col lg={12}>
                             <p><strong>Dashboard</strong></p>
@@ -101,8 +94,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
                         </Col>
                     </Row>
                 </div>
-            </Container>
-        </Aux>
+        </Layout>
     );
 }
 

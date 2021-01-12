@@ -1,29 +1,28 @@
 import * as React from 'react';
 import Logo from '@components/Logo/Logo';
 import useStyles from './NavBar.style';
-import NavItems from './NavItems/NavItems';
-import NavIcons from './NavIcons/NavIcons';
-import SideBar from '@components/SideBar/SideBar';
-import SideBarToggler from '@components/NavBar/SideBarToggler/SideBarToggler';
-import BackDrop from '@components/BackDrop/BackDrop';
+import NavItems from '@common/NavItems/NavItems';
+import NavIcons from '@common/NavIcons/NavIcons';
+import Aux from '@Aux';
+import SideBarToggler from '@common/SideBarToggler/SideBarToggler';
 export interface NavBarProps {
-    
+    sidebar: boolean,
+    toggler: () => void
 }
  
-const NavBar: React.FC<NavBarProps> = () => {
-    const [sideBarOpen, switchSidebar] = React.useState(false);
+const NavBar: React.FC<NavBarProps> = ({sidebar, toggler}: NavBarProps) => {
     const classes = useStyles();
-    const toggleSidebar = () =>{
-        switchSidebar(!sideBarOpen);
-    }
     return ( 
     <header className={classes.header}>
         <Logo/>
-        <NavItems/>
-        <NavIcons/>
-        <SideBarToggler clicked={toggleSidebar}/>
-        <SideBar open={sideBarOpen} clicked={toggleSidebar}/>
-        <BackDrop open={sideBarOpen} clicked={toggleSidebar}/>
+        {!sidebar?
+            <Aux>
+                <NavItems open={!sidebar}/>
+                <NavIcons open={!sidebar}/>
+            </Aux>
+        : <SideBarToggler clicked={toggler} />
+        }
+        
     </header> 
     );
 }
