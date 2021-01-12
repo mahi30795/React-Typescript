@@ -20,6 +20,7 @@ const Layout: React.FC<LayoutProps> = (props: any) => {
         }
         else{
             setVisibility(false);
+            switchSidebar(false);
         }
     })
 
@@ -29,6 +30,7 @@ const Layout: React.FC<LayoutProps> = (props: any) => {
         }
         else{
             setVisibility(false);
+            switchSidebar(false);
         }
     },[sidebar]);
 
@@ -46,7 +48,7 @@ const Layout: React.FC<LayoutProps> = (props: any) => {
 
 
             <SideBar open={sideBarOpen} clicked={toggleSidebar} />
-            <BackDrop open={sideBarOpen} clicked={toggleSidebar} />
+            <BackDrop open={sidebar&&sideBarOpen} clicked={toggleSidebar} />
             <Container fluid>
                 {props.children}
             </Container>

@@ -12,6 +12,15 @@ const useStyles = makeStyles({
             padding: '10px 0',
             margin: '0 15px'
         }
+    },
+    menu:{
+        width: '80%',
+        padding: '20px 5px 16px 15vh',
+        display: 'flex',
+        justifyContent: 'space-between',
+        ['@media (max-width:1024px)']: { // eslint-disable-line no-useless-computed-key
+            padding: '20px 0 16px 0',
+        }
     }
 })
 
