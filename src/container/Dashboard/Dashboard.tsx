@@ -83,12 +83,12 @@ const Dashboard: React.FC<DashboardProps> = () => {
                         </Col>
                     </Row>
                     <Row>
-                        <Col lg={9}>
+                        <Col md={9} lg={8}>
                             <div className={classes.dataWrap}>
 
                             </div>
                         </Col>
-                        <Col lg={3}>
+                        <Col md={3} lg={4}>
                             <div className={classes.sideWrap}>
                                 <Container>
                                     <Row>
