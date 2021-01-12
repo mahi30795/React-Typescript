@@ -14,6 +14,15 @@ const Layout: React.FC<LayoutProps> = (props: any) => {
     const [sideBarOpen, switchSidebar] = useState(false);
     const [sidebar, setVisibility] = useState(false);
    
+    window.addEventListener('resize',()=>{
+        if(window.innerWidth<=768){
+            setVisibility(true);
+        }
+        else{
+            setVisibility(false);
+        }
+    })
+
     React.useEffect(()=>{
         if(window.innerWidth<=768){
             setVisibility(true);
