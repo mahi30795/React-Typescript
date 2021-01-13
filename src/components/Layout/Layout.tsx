@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = (props: any) => {
     const [sideBarOpen, switchSidebar] = useState(false);
     const [sidebar, setVisibility] = useState(false);
    
-    window.addEventListener('resize',()=>{
+    const handleResize = () =>{
         if(window.innerWidth<=768){
             setVisibility(true);
         }
@@ -22,7 +22,8 @@ const Layout: React.FC<LayoutProps> = (props: any) => {
             setVisibility(false);
             switchSidebar(false);
         }
-    })
+    }
+    window.addEventListener('resize', handleResize)
 
     React.useEffect(()=>{
         if(window.innerWidth<=768){
@@ -32,6 +33,11 @@ const Layout: React.FC<LayoutProps> = (props: any) => {
             setVisibility(false);
             switchSidebar(false);
         }
+
+        return () =>{
+            window.removeEventListener('resize', handleResize);
+        }
+
     },[sidebar]);
 
     const toggleSidebar = () => {
